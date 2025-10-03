@@ -1,9 +1,9 @@
-import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import '../../../../widgets/common/custom_button.dart';
-import '../../../../widgets/common/custom_textfield.dart';
-import '../../../../core/localization/app_localizations.dart';
-import '../../../../core/constants/app_constants.dart';
+import 'package:flutter/material.dart';
+import 'package:traffic_violations_app/core/constants/app_constants.dart';
+import 'package:traffic_violations_app/core/localization/app_localizations.dart';
+import 'package:traffic_violations_app/widgets/common/custom_button.dart';
+import 'package:traffic_violations_app/widgets/common/custom_textfield.dart';
 
 class EditDriverScreen extends StatefulWidget {
   final String driverId;
