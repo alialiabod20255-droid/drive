@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../../../core/localization/app_localizations.dart';
-import '../../../../widgets/common/custom_card.dart';
+import 'package:traffic_violations_app/core/localization/app_localizations.dart';
+import 'package:traffic_violations_app/widgets/common/custom_card.dart';
 
 class DashboardScreen extends StatelessWidget {
   const DashboardScreen({super.key});
