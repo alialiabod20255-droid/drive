@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../../../../widgets/common/custom_button.dart';
-import '../../../../widgets/common/custom_textfield.dart';
-import '../../../../core/localization/app_localizations.dart';
-import '../../providers/auth_provider.dart';
+import 'package:traffic_violations_app/core/localization/app_localizations.dart';
+import 'package:traffic_violations_app/features/auth/providers/auth_provider.dart';
+import 'package:traffic_violations_app/widgets/common/custom_button.dart';
+import 'package:traffic_violations_app/widgets/common/custom_textfield.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
