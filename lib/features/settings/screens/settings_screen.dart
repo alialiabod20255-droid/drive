@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../../core/localization/app_localizations.dart';
+import 'package:traffic_violations_app/core/localization/app_localizations.dart';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});
