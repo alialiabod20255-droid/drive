@@ -15,6 +15,22 @@ class ViolationModel {
     required this.status,
   });
 
+  ViolationModel copyWith({
+    String? id,
+    String? driverId,
+    String? type,
+    DateTime? date,
+    int? pointsDeducted,
+    String? status,
+  }) => ViolationModel(
+        id: id ?? this.id,
+        driverId: driverId ?? this.driverId,
+        type: type ?? this.type,
+        date: date ?? this.date,
+        pointsDeducted: pointsDeducted ?? this.pointsDeducted,
+        status: status ?? this.status,
+      );
+
   factory ViolationModel.fromMap(String id, Map<String, dynamic> data) {
     return ViolationModel(
       id: id,
