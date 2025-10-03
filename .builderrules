@@ -1,0 +1,241 @@
+اريد ان تعمل تحليل للمشروع هذا مشروع الفلاتر  الذي عملت له استدعاء من مشروعي ثم تعمل الاكواد وتكتبها امامي في المستودع نفسه ارى التعديلا في الواجهه الذي امامي و انت تكتب
+
+اعمل هذا
+
+أريدك أن تبني لي تطبيق Flutter متكامل مع Firebase لاسم المشروع:
+"نظام إدارة وتحليل مخالفات السير للسائقين"
+المتطلبات:
+أكثر من 50 شاشة تشمل: تسجيل الدخول، تسجيل مستخدم جديد، إدارة السائقين، إدارة المخالفات، شاشة تقارير وتحليلات، شاشة الإشعارات، شاشة الملف الشخصي، شاشة الإعدادات، شاشة تغيير اللغة، شاشة الثيم (فاتح/داكن)، شاشة البحث، شاشة تفاصيل السائق، شاشة تفاصيل المخالفة، شاشة إضافة مستخدم، شاشة Dashboard رئيسية، شاشة إدارة الموظفين، شاشة إدارة المشرفين، شاشة إحصائيات… إلخ.
+Firebase Integration:
+Authentication (Email/Password + Phone Login).
+Firestore Database (Drivers, Violations, Users).
+Firebase Cloud Messaging (تنبيهات المخالفات).
+دعم تعدد اللغات (Localization): على الأقل العربية + الإنجليزية، مع إمكانية إضافة لغات مستقبلًا.
+دعم الثيمات (Themes): فاتح + داكن + مخصص.
+تصميم احترافي باستخدام Material 3 + Responsive UI بحيث يعمل على الموبايل والتابلت.
+State Management: استخدم Provider أو Riverpod.
+بنية المشروع (Project Structure):
+lib/
+main.dart
+core/ (themes, localization, constants)
+data/ (models, repositories, services)
+features/
+auth/ (login, register, reset password)
+drivers/ (list, details, add, edit)
+violations/ (list, details, add, edit)
+reports/ (charts, analytics, export PDF)
+settings/ (language, theme, profile)
+dashboard/ (home, stats, navigation)
+widgets/ (common reusable widgets: buttons, textfields, cards)
+وظائف التطبيق (Features):
+تسجيل الدخول/تسجيل جديد.
+إدارة السائقين (إضافة، تعديل، حذف، عرض التفاصيل).
+إدارة المخالفات (إضافة، تعديل، حذف، عرض التفاصيل).
+خصم النقاط تلقائيًا عند إضافة مخالفة.
+تعليق رخصة السائق عند وصول النقاط إلى 0.
+عرض لوحة تحكم (Dashboard) فيها إحصائيات (Chart) عن السائقين والمخالفات.
+شاشة تقارير مفصلة مع إمكانية تصدير PDF.
+شاشة إشعارات (Notifications) للسائقين والمشرفين.
+شاشة ملف شخصي (Profile) وتعديل بيانات الحساب.
+شاشة إعدادات (Settings) للتحكم باللغة والثيم والإشعارات.
+التقارير (Reports): استخدم مكتبة Recharts أو أي مكتبة Flutter Charts لعرض الرسوم البيانية.
+الكود يكون نظيف (Clean Code) مع التعليقات والتوثيق.
+وفر أكثر من 50 شاشة جاهزة موزعة بين الميزات المذكورة أعلاه.
+المخرجات المتوقعة:
+كود Flutter كامل وجاهز للتشغيل.
+جميع الملفات منظمة في المجلدات المذكورة.
+دعم كامل للثيمات واللغات.
+ربط مع Firebase Authentication + Firestore.
+واجهة مستخدم احترافية ومتجاوبة.
+
+لا تشغيل أو اختبار هنا: لا تحاول تشغيل flutter run أو تجميع أي شيء في بيئتك. فقط أنشئ ملفات الكود الكاملة. سأتعامل مع كل التشغيل والاختبار والتجميع محليًا على إعداد Flutter الخاص بي (لدي Flutter SDK مثبتًا وسأشغله بنفسي).
+
+التركيز على مجلد lib و pubspec.yaml: أخرج الكود فقط لمجلد lib/ (جميع ملفات Dart كما هو محدد) وملف pubspec.yaml. لا تدرج أي ملفات أخرى مثل android/، ios/، أو الملفات المُولَّدة.
+
+الاعتماديات في pubspec.yaml: أضف جميع الاعتماديات المطلوبة تحت dependencies: (مثل firebase_core، firebase_auth، cloud_firestore، firebase_messaging، provider، intl، flutter_localizations، fl_chart، pdf، printing، shared_preferences)، لكن بدون تحديد إصدارات (مثل firebase_core: لا firebase_core: ^2.24.2). احتفظ بباقي pubspec.yaml قياسيًا (name: traffic_violations_app، description، إلخ).
+
+ملاحظة هيكل المشروع: هذا الهيكل الدقيق للمجلدات موجود بالفعل على جانبي لأنني رفعتُه إلى GitHub واستدعيته (cloned) محليًا. الكود الذي تولِّده يجب أن يتناسب تمامًا مع مجلدات lib/ الموجودة دون إنشاء مجلدات جديدة – فقط املأ الملفات.
+
+يرجى اتباع خطوات البرومبت الأصلي بالضبط (الخطوات 1-7)، مع إخراج الكود منظمًا حسب الخطوات/الملفات/المجلدات (استخدم كتل كود لكل ملف، مثل ```dart:disable-run
+
+أنت مطور Flutter خبير مع معرفة عميقة بـ Firebase، إدارة الحالة، التوطين، وتصميم Material. مهمةك هي بناء تطبيق Flutter كامل وجاهز للإنتاج يُدعى "نظام إدارة وتحليل مخالفات السير للسائقين" (نظام إدارة وتحليل مخالفات السير للسائقين). يجب أن يكون التطبيق متكاملاً بالكامل مع Firebase، يدعم اللغتين العربية والإنجليزية، الثيمات الفاتحة/الداكنة/المخصصة، ويحتوي على أكثر من 50 شاشة موزعة عبر الميزات. استخدم مبادئ الكود النظيف مع التعليقات والتوثيق. أخرج الكود الكامل منظمًا في هيكل المشروع المحدد، جاهزًا للتشغيل بـ flutter run.
+
+اتبع هذه الخطوات بالضبط، واحدة تلو الأخرى، وشرح السبب باختصار في بداية إخراج كل خطوة. أنشئ جميع الملفات مع الاستيرادات السليمة، معالجة الأخطاء، وواجهة مستخدم متجاوبة باستخدام MediaQuery لدعم الهواتف والتابلت. استخدم Material 3 لتصميم احترافي (مثل الزوايا المستديرة، الارتفاع، مخططات الألوان).
+
+الخطوة 1: إعداد هيكل المشروع و main.dart
+
+أنشئ هيكل المجلدات بالضبط كالتالي:
+lib/
+├── main.dart
+├── core/
+│   ├── themes/
+│   │   ├── light_theme.dart
+│   │   ├── dark_theme.dart
+│   │   └── custom_theme.dart
+│   ├── localization/
+│   │   ├── app_localizations.dart
+│   │   └── strings_ar.arb
+│   │   └── strings_en.arb
+│   └── constants/
+│       └── app_constants.dart
+├── data/
+│   ├── models/
+│   │   ├── user_model.dart
+│   │   ├── driver_model.dart
+│   │   └── violation_model.dart
+│   ├── repositories/
+│   │   ├── auth_repository.dart
+│   │   ├── driver_repository.dart
+│   │   └── violation_repository.dart
+│   └── services/
+│       ├── firebase_service.dart
+│       └── notification_service.dart
+├── features/
+│   ├── auth/
+│   │   ├── screens/
+│   │   │   ├── login_screen.dart
+│   │   │   ├── register_screen.dart
+│   │   │   └── forgot_password_screen.dart
+│   │   └── providers/
+│   │       └── auth_provider.dart
+│   ├── drivers/
+│   │   ├── screens/
+│   │   │   ├── drivers_list_screen.dart
+│   │   │   ├── driver_details_screen.dart
+│   │   │   ├── add_driver_screen.dart
+│   │   │   └── edit_driver_screen.dart
+│   │   └── providers/
+│   │       └── drivers_provider.dart
+│   ├── violations/
+│   │   ├── screens/
+│   │   │   ├── violations_list_screen.dart
+│   │   │   ├── violation_details_screen.dart
+│   │   │   ├── add_violation_screen.dart
+│   │   │   └── edit_violation_screen.dart
+│   │   └── providers/
+│   │       └── violations_provider.dart
+│   ├── reports/
+│   │   ├── screens/
+│   │   │   ├── reports_screen.dart
+│   │   │   ├── analytics_screen.dart
+│   │   │   └── export_pdf_screen.dart
+│   │   └── providers/
+│   │       └── reports_provider.dart
+│   ├── settings/
+│   │   ├── screens/
+│   │   │   ├── settings_screen.dart
+│   │   │   ├── language_screen.dart
+│   │   │   ├── theme_screen.dart
+│   │   │   └── profile_screen.dart
+│   │   └── providers/
+│   │       └── settings_provider.dart
+│   └── dashboard/
+│       ├── screens/
+│       │   ├── dashboard_screen.dart
+│       │   ├── stats_screen.dart
+│       │   └── navigation_screen.dart
+│       └── providers/
+│           └── dashboard_provider.dart
+└── widgets/
+├── common/
+│   ├── custom_button.dart
+│   ├── custom_textfield.dart
+│   └── custom_card.dart
+└── charts/
+└── violation_chart.dart
+
+في main.dart: قم بتهيئة Firebase، إعداد Provider (استخدم Provider لإدارة الحالة)، MaterialApp مع التوطين، دعم الثيمات، وتوجيه إلى SplashScreen في البداية. أضف الاعتماديات في pubspec.yaml: firebase_core، firebase_auth، cloud_firestore، firebase_messaging، provider، intl، flutter_localizations، fl_chart (للرسوم البيانية)، pdf، printing (لتصدير PDF)، shared_preferences (للحفاظ على الثيمات/اللغات).
+
+شرح: هذا الهيكل يضمن هندسة معمارية نظيفة (فصل الاهتمامات: core للمشترك، data للخلفية، features للوحدات، widgets لإعادة الاستخدام).
+
+الخطوة 2: تنفيذ تكامل Firebase
+
+في data/services/firebase_service.dart: قم بتهيئة Firebase Auth، Firestore، و Cloud Messaging. قم بإعداد المجموعات: 'users' (للمشرفين/الموظفين)، 'drivers' (id، name، phone، license_number، points: أولي 12)، 'violations' (id، driver_id، type، date، points_deducted، status).
+
+في data/repositories/: نفذ عمليات CRUD للمصادقة (تسجيل الدخول ببريد إلكتروني/كلمة مرور وهاتف، تسجيل، إعادة تعيين كلمة مرور)، السائقين (إضافة، الحصول على الكل، الحصول على بـ ID، تحديث، حذف)، المخالفات (إضافة مع خصم نقاط تلقائي: تحديث نقاط السائق = points - points_deducted؛ إذا points <=0، قم بتعيين license_suspended: true)، المستخدمين.
+
+في notification_service.dart: قم بإعداد FCM للإشعارات الدفعية (مثل تنبيهات المخالفات للسائقين/المشرفين).
+
+أضف المنطق: عند إضافة مخالفة، تحقق من النقاط وعلق الرخصة إذا <=0؛ أرسل إشعار FCM.
+
+شرح: Firebase يتعامل مع المصادقة الآمنة ومزامنة البيانات في الوقت الفعلي. استخدم Streams للتحديثات الحية في القوائم.
+
+الخطوة 3: تنفيذ التوطين والثيمات
+
+في core/localization/: قم بإعداد Intl في Flutter للعربية (دعم RTL) والإنجليزية. حدد السلاسل في ملفات .arb (مثل 'app_title': {'@app_title': {'description': 'App title'}} لكلا اللغتين). في app_localizations.dart: أنشئ المندوبين.
+
+في core/themes/: حدد ThemeData للفاتح (primary: أزرق)، الداكن (primary: أزرق غامق)، المخصص (ألوان قابلة للاختيار عبر shared_preferences). استخدم ThemeMode.system أو تبديل يدوي.
+
+في main.dart: لف مع Localizations واستخدم ThemeProvider لتبديل الثيمات ديناميكيًا.
+
+شرح: التوطين يضمن RTL للعربية. الثيمات تستخدم ColorScheme لتوافق Material 3؛ احفظ الاختيارات في SharedPreferences.
+
+الخطوة 4: تنفيذ إدارة الحالة بـ Provider
+
+استخدم حزمة Provider. أنشئ providers في كل ميزة: مثل AuthProvider (يتعامل مع حالة الدخول، بيانات المستخدم)، DriversProvider (يجلب قائمة السائقين، يدير CRUD)، إلخ. استخدم ChangeNotifier للتحديثات التفاعلية.
+
+في main.dart: MultiProvider في الجذر مع جميع الـ providers.
+
+شرح: Provider خفيف الوزن لهذا التطبيق؛ يفصل الواجهة عن المنطق التجاري، مما يمكن إعادة البناء الفعالة.
+
+الخطوة 5: بناء الشاشات الأساسية والميزات (يهدف إلى >50 شاشة من خلال التقسيم)
+
+ابدأ بالمصادقة: login_screen (نموذج مع تبديل بريد/هاتف، التحقق من المدخلات)، register_screen (حقول: name، email، phone، role: admin/employee/driver)، forgot_password_screen (مدخل بريد، إرسال رابط إعادة التعيين).
+
+السائقين: drivers_list_screen (ListView مع بحث، تصفية بنقاط/حالة؛ >5 شاشات فرعية: قائمة السائقين المعلقين، قائمة المخاطر العالية، قائمة تاريخ النقاط)، driver_details_screen (تبويبات: معلومات، مخالفات، تقارير)، add_driver_screen (نموذج مع التحقق)، edit_driver_screen (نموذج مملوء مسبقًا).
+
+المخالفات: violations_list_screen (تصفية بتاريخ/سائق/حالة؛ >5 شاشات فرعية: معلقة، محلولة، حسب النوع)، violation_details_screen (مع صور مرفقة إذا أضيفت)، add_violation_screen (قائمة منسدلة للنوع، منتقي تاريخ، حساب خصم النقاط تلقائيًا)، edit_violation_screen.
+
+التقارير: reports_screen (fl_chart pie/bar للمخالفات حسب النوع/الشهر)، analytics_screen (رسم خطي لاتجاهات النقاط؛ >3 شاشات فرعية: تحليلات السائق، تقارير شهرية، نظرة عامة سنوية)، export_pdf_screen (إنشاء PDF مع الرسوم باستخدام حزمة pdf، مشاركة/طباعة).
+
+الإعدادات: settings_screen (قائمة خيارات تؤدي إلى شاشات فرعية)، language_screen (منتقي لـ ar/en، تطبيق فوري)، theme_screen (مفاتيح لفاتح/داكن/مخصص، منتقي ألوان)، profile_screen (تعديل معلومات المستخدم، تسجيل خروج).
+
+لوحة التحكم: dashboard_screen (بطاقات مع إحصائيات: إجمالي السائقين، مخالفات اليوم، متوسط النقاط؛ شريط تنقل سفلي إلى أقسام أخرى)، stats_screen (رسوم مفصلة)، navigation_screen (شريط تنقل سفلي مع 5 تبويبات: Home، Drivers، Violations، Reports، Settings).
+
+أضف المزيد من الشاشات للوصول إلى >50: في السائقين: search_drivers_screen، driver_license_screen، points_deduction_history_screen. في المخالفات: violation_search_screen، batch_add_violations_screen، violation_export_screen. في التقارير: custom_report_builder_screen، report_filters_screen، pdf_preview_screen. في الإعدادات: notification_preferences_screen، account_security_screen، about_app_screen. في لوحة التحكم: quick_actions_screen، admin_panel_screen، employee_management_screen (إضافة/تعديل/حذف موظفين)، supervisor_dashboard_screen، statistics_overview_screen، violation_analytics_screen، driver_ranking_screen، monthly_summary_screen، yearly_report_screen، export_all_screen، import_data_screen، backup_settings_screen، data_sync_screen، error_logs_screen، feedback_screen، help_center_screen، terms_screen، privacy_policy_screen، version_info_screen. ضمن أن كل واحدة هي Scaffold كامل مع AppBar، body، وتخطيط متجاوب (استخدم LayoutBuilder).
+
+لجميع الشاشات: استخدم widgets مخصصة (أزرار مع تحميل، حقول نص مع التحقق، بطاقات مع ارتفاع). متجاوب: استخدم Flexible/Expanded للتابلت.
+
+شرح: التقسيم ينشئ >50 شاشة (مثل 10+ لكل ميزة). كل شاشة لها تنقل (push/pop مع routes)، معالجة أخطاء (snackbars)، ومؤشرات تحميل.
+
+الخطوة 6: تنفيذ الميزات المتقدمة
+
+خصم النقاط التلقائي وتعليق الرخصة: في violation_repository.add()، جلب السائق، تحديث النقاط، إذا <=0 قم بتعيين suspended، أرسل FCM.
+
+رسوم لوحة التحكم: استخدم fl_chart لـ bar/line/pie (مثل مخالفات لكل سائق).
+
+تصدير PDF: في التقارير، استخدم حزمة pdf لإنشاء وثيقة مع نصوص/جداول/رسوم، ثم printing للمشاركة.
+
+الإشعارات: عند الدخول، اطلب إذنًا؛ أرسل عند إضافة مخالفة.
+
+البحث: نفذ في القوائم مع TextField وتصفية streams.
+
+الأدوار: في المصادقة، احفظ دور المستخدم في Firestore؛ قيد الشاشات (مثل الموظفون لا يديرون المشرفين).
+
+شرح: هذه تربط الميزات معًا؛ استخدم async/await لعمليات Firebase، مع try-catch.
+
+الخطوة 7: إضافة Widgets قابلة لإعادة الاستخدام والتلميع النهائي
+
+في widgets/: CustomButton (أشكال مرتفعة، محيطية)، CustomTextField (مع prefix/suffix، التحقق)، CustomCard (مع ظل، حشو).
+
+في charts/: ViolationChart widget باستخدام fl_chart.BarChart لإعادة الاستخدام.
+
+أضف معالجة أخطاء عامة، شاشة splash (مع شعار)، onboarding إذا أول إطلاق.
+
+ضمن RTL للعربية (Directionality)، واختبر الاستجابة (مثل GridView للتابلت).
+
+شرح: القابلة لإعادة الاستخدام تقلل من تكرار الكود؛ التلميع يضمن شعورًا احترافيًا.
+
+تعليمات الإخراج النهائية:
+
+قدم الكود الكامل لجميع الملفات في الهيكل، مضغوطًا أو ككتل كود لكل مجلد/ملف.
+
+أدرج pubspec.yaml مع جميع الاعتماديات والأصول (مثل الأيقونات).
+
+أضف تعليقات في الكود (مثل // TODO: Add image upload).
+
+اختبر ذهنيًا: التطبيق يعمل، المصادقة تعمل، البيانات تستمر، الثيمات تتبدل، الرسوم تُعرض.
+
+إذا كان أي شيء مفقودًا، لاحظه واقترح امتدادات.
+
+متحمس للحصول على الكود الكامل – أخرجه خطوة بخطوة!
